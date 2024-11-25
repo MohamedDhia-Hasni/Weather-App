@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #F1F1F1, #E0D4B4);
+    color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: #ECF0F1;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.weather-container.dark-mode {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #4A4A4A;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h1 {
+    color: #ECF0F1;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background: #F7F7F7;
+    color: #555555;
+}
+
+body.dark-mode input {
+    background: #2C3E50;
+    color: #ECF0F1;
+}
+
+button {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    background: #28A745;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+#toggle-mode {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-mode:hover {
+    background-color: #218838;
+}
+
+#weather-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+#weather-info.active {
+    opacity: 1;
+}
+
+body.dark-mode #weather-info {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ECF0F1;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: #555555;
+    text-align: center;
+    width: 100%;
+}
+
+body.dark-mode footer {
+    color: #ECF0F1;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

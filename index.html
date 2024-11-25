@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="getCoordsByCity(document.getElementById('city').value)">Get Weather</button>
+        <div id="weather-info"></div>
+        <button id="toggle-mode">Switch to Dark Mode</button>
+    </div>
+
+    
+    <footer>
+        <p>Made by Mohamed Dhia Hasni</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
